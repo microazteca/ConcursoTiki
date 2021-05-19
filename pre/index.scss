@@ -273,20 +273,126 @@ header {
 			}
 		}
 	}
+}
 
-	// @media screen and (max-width: 800px) {
-	// 	.galeriaColumn {
-	// 		-ms-flex: 50%;
-	// 		flex: 50%;
-	// 		max-width: 50%;
-	// 	}
-	// }
+@media only screen and (max-width: 568px) {
+	header {
+		display: flex;
+		justify-content: center;
+		align-content: center;
 
-	// @media screen and (max-width: 600px) {
-	// 	.galeriaColumn {
-	// 		-ms-flex: 100%;
-	// 		flex: 100%;
-	// 		max-width: 100%;
-	// 	}
-	// }
+		>img {
+			width: 3.5rem;
+			height: 4rem;
+			animation: none;
+			position: initial;
+		}
+
+		#izquierda {
+			padding-right: 1rem;
+		}
+
+		#derecha {
+			padding-left: 1rem;
+		}
+
+		.headerTexto {
+			>h1 {
+				font-size: 3rem;
+				align-self: center;
+			}
+
+			>nav {
+				>ul {
+					li {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.fondo {
+		width: 100%;
+		height: 100%;
+	}
+
+	.ganadores {
+		padding-top: 3rem;
+
+		.ganadoresTitulo {
+			>h2 {
+				font-size: 2.2rem;
+			}
+		}
+
+		.ganadoresLista {
+			>ul {
+				display: flex;
+				flex-direction: column;
+
+				>li {
+					font-size: 1.5rem;
+					align-self: center;
+					justify-content: center;
+					text-align: center;
+
+					.ganadoresContenedor {
+						>img {
+							width: 7.5rem;
+							height: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.historia {
+		.historiaTitulo {
+			>h2 {
+				font-size: 2.2rem;
+			}
+		}
+
+		.historiaTexto {
+			padding: 0 .5rem 0;
+
+			>p {
+				font-size: 1.5rem;
+				padding-top: 1rem;
+			}
+		}
+	}
+
+	.galeria {
+		.galeriaTitulo {
+			>h2 {
+				font-size: 2.2rem;
+			}
+		}
+
+		.galeriaImg {
+			padding: .5rem 0 3rem;
+			flex: 50%;
+			max-width: initial;
+
+			.galeriaColumn {
+				flex: 50%;
+				max-width: initial;
+
+			}
+		}
+	}
+
+	.flechaIrArriba {
+		a {
+			>img {
+				bottom: 3rem;
+				right: .5rem;
+				height: 2.5rem;
+				width: 2.5rem;
+			}
+		}
+	}
 }
