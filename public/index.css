@@ -218,3 +218,87 @@ header .headerTexto > nav > ul > li > a:active {
   -webkit-transform: scale(1.2);
   transform: scale(1.05);
 }
+
+@media only screen and (max-width: 568px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  header > img {
+    width: 3.5rem;
+    height: 4rem;
+    animation: none;
+    position: initial;
+  }
+  header #izquierda {
+    padding-right: 1rem;
+  }
+  header #derecha {
+    padding-left: 1rem;
+  }
+  header .headerTexto > h1 {
+    font-size: 3rem;
+    align-self: center;
+  }
+  header .headerTexto > nav > ul li {
+    font-size: 1.5rem;
+  }
+
+  .fondo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ganadores {
+    padding-top: 3rem;
+  }
+  .ganadores .ganadoresTitulo > h2 {
+    font-size: 2.2rem;
+  }
+  .ganadores .ganadoresLista > ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .ganadores .ganadoresLista > ul > li {
+    font-size: 1.5rem;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ganadores .ganadoresLista > ul > li .ganadoresContenedor > img {
+    width: 7.5rem;
+    height: 50%;
+  }
+
+  .historia .historiaTitulo > h2 {
+    font-size: 2.2rem;
+  }
+  .historia .historiaTexto {
+    padding: 0 0.5rem 0;
+  }
+  .historia .historiaTexto > p {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .galeria .galeriaTitulo > h2 {
+    font-size: 2.2rem;
+  }
+  .galeria .galeriaImg {
+    padding: 0.5rem 0 3rem;
+    flex: 50%;
+    max-width: initial;
+  }
+  .galeria .galeriaImg .galeriaColumn {
+    flex: 50%;
+    max-width: initial;
+  }
+
+  .flechaIrArriba a > img {
+    bottom: 3rem;
+    right: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
