@@ -102,6 +102,31 @@ header .headerTexto > nav > ul > li > a:active {
   opacity: 0.4;
 }
 
+.flechaIrArriba a > img {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(255, 166, 0, 0.727);
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+  border-radius: 10%;
+  position: fixed;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flechaIrArriba a > img.active {
+  visibility: visible;
+  opacity: 1;
+}
+.flechaIrArriba a > img.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .ganadores {
   font-family: "Amatic SC", cursive;
   padding-top: 5rem;
