@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 100;
+  color: white;
+  font-family: "Amatic SC", cursive;
+}
+header > img {
+  height: 10rem;
+  animation: headerTiki 5s infinite linear;
+}
+header > img:nth-child(1) {
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+header > img:nth-child(3) {
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-out;
+}
+header .headerTexto {
+  display: flex;
+  flex-direction: column;
+}
+header .headerTexto > h1 {
+  font-size: 6rem;
+  animation: headerTitulo 5s infinite alternate;
+}
+header .headerTexto > nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+header .headerTexto > nav > ul > li > a {
+  color: white;
+  transition: color 0.3s;
+}
+header .headerTexto > nav > ul > li > a:hover {
+  color: orange;
+}
+header .headerTexto > nav > ul > li > a:active {
+  color: greenyellow;
+}
+
+@keyframes headerTitulo {
+  0% {
+    color: orangered;
+  }
+  100% {
+    color: orange;
+  }
+}
+@keyframes headerTiki {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.fondo > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.fondo::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.ganadores {
+  font-family: "Amatic SC", cursive;
+  padding-top: 5rem;
+}
+.ganadores .ganadoresTitulo {
+  position: relative;
+}
+.ganadores .ganadoresTitulo > h2 {
+  color: yellow;
+  font-size: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.ganadores .ganadoresLista {
+  position: relative;
+  padding-top: 1rem;
+}
+.ganadores .ganadoresLista > ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: white;
+}
+.ganadores .ganadoresLista > ul > li {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.ganadores .ganadoresLista > ul > li:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.ganadores .ganadoresLista > ul > li .ganadoresContenedor > img {
+  height: 11rem;
+  border-radius: 0.25rem;
+}
+
+.historia {
+  font-family: "Amatic SC", cursive;
+  position: relative;
+}
+.historia .historiaTitulo > h2 {
+  padding-top: 5rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: yellow;
+}
+.historia .historiaTexto {
+  padding: 1rem 7rem;
+  font-size: 2rem;
+  text-align: justify;
+  color: white;
+}
+
+.galeria {
+  position: relative;
+}
+.galeria .galeriaTitulo > h2 {
+  font-family: "Amatic SC", cursive;
+  position: relative;
+  padding-top: 3rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: yellow;
+}
+.galeria .galeriaImg {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 3rem 2rem;
+}
+.galeria .galeriaImg .galeriaColumn {
+  flex: 25%;
+  max-width: 30%;
+  padding: 0 0.25rem;
+  margin: 0;
+}
+.galeria .galeriaImg .galeriaColumn > img {
+  margin-top: 0.25rem;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.25rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.galeria .galeriaImg .galeriaColumn > img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.05);
+}
