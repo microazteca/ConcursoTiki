@@ -183,7 +183,7 @@ header .headerTexto > nav > ul > li > a:active {
 }
 
 .galeria {
-  position: relative;
+  justify-content: center;
 }
 .galeria .galeriaTitulo > h2 {
   font-family: "Amatic SC", cursive;
@@ -196,20 +196,21 @@ header .headerTexto > nav > ul > li > a:active {
 .galeria .galeriaImg {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  position: relative;
   flex-wrap: wrap;
-  padding: 1rem 3rem 2rem;
 }
 .galeria .galeriaImg .galeriaColumn {
-  flex: 25%;
-  max-width: 30%;
+  flex: 50%;
   padding: 0 0.25rem;
   margin: 0;
+  justify-content: center;
+  align-self: center;
 }
 .galeria .galeriaImg .galeriaColumn > img {
   margin-top: 0.25rem;
   align-items: center;
   width: 100%;
+  height: 100%;
   border-radius: 0.25rem;
   -webkit-transition: 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -219,7 +220,7 @@ header .headerTexto > nav > ul > li > a:active {
   transform: scale(1.05);
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 500px) {
   header {
     display: flex;
     justify-content: center;
@@ -267,7 +268,7 @@ header .headerTexto > nav > ul > li > a:active {
     text-align: center;
   }
   .ganadores .ganadoresLista > ul > li .ganadoresContenedor > img {
-    width: 7.5rem;
+    width: 6rem;
     height: 50%;
   }
 
@@ -275,24 +276,158 @@ header .headerTexto > nav > ul > li > a:active {
     font-size: 2.2rem;
   }
   .historia .historiaTexto {
-    padding: 0 0.5rem 0;
+    padding: 1rem 1rem 0;
   }
   .historia .historiaTexto > p {
     font-size: 1.5rem;
     padding-top: 1rem;
   }
 
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .galeria .galeriaTitulo > h2 {
     font-size: 2.2rem;
   }
   .galeria .galeriaImg {
-    padding: 0.5rem 0 3rem;
-    flex: 50%;
+    padding: 0.5rem 0 0.5rem;
     max-width: initial;
+    flex-wrap: wrap;
   }
   .galeria .galeriaImg .galeriaColumn {
+    width: 100%;
+    flex-wrap: wrap;
     flex: 50%;
+  }
+  .galeria .galeriaImg .galeriaColumn > img {
+    width: 100%;
+    height: 90%;
+  }
+
+  .flechaIrArriba a > img {
+    bottom: 3rem;
+    right: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  header > img {
+    width: 5rem;
+    height: 6rem;
+    animation: none;
+    position: initial;
+  }
+  header #izquierda {
+    padding-right: 1rem;
+  }
+  header #derecha {
+    padding-left: 1rem;
+  }
+  header .headerTexto > h1 {
+    font-size: 5rem;
+    align-self: center;
+  }
+  header .headerTexto > nav > ul li {
+    font-size: 2rem;
+  }
+
+  .fondo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ganadores {
+    padding-top: 3rem;
+  }
+  .ganadores .ganadoresTitulo > h2 {
+    font-size: 2.5rem;
+  }
+  .ganadores .ganadoresLista > ul {
+    display: flex;
+  }
+  .ganadores .ganadoresLista > ul > li {
+    font-size: 2rem;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ganadores .ganadoresLista > ul > li .ganadoresContenedor > img {
+    width: 7rem;
+    height: 50%;
+  }
+
+  .historia .historiaTitulo > h2 {
+    font-size: 2.5rem;
+  }
+  .historia .historiaTexto {
+    padding: 0 0.5rem 0;
+  }
+  .historia .historiaTexto > p {
+    font-size: 2rem;
+    padding: 1rem 2rem 0;
+  }
+
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .galeria .galeriaTitulo > h2 {
+    font-size: 2.5rem;
+  }
+  .galeria .galeriaImg {
+    padding: 0.5rem 0 0.5rem;
     max-width: initial;
+    flex-wrap: wrap;
+  }
+  .galeria .galeriaImg .galeriaColumn {
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 33.3%;
+  }
+  .galeria .galeriaImg .galeriaColumn > img {
+    width: 100%;
+    height: 90%;
+  }
+
+  .flechaIrArriba a > img {
+    bottom: 3rem;
+    right: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1500px) {
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .galeria .galeriaTitulo > h2 {
+    font-size: 2.5rem;
+  }
+  .galeria .galeriaImg {
+    padding: 0.5rem 0 0.5rem;
+    max-width: initial;
+    flex-wrap: wrap;
+    margin: 0 7rem 0;
+  }
+  .galeria .galeriaImg .galeriaColumn {
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 25%;
+  }
+  .galeria .galeriaImg .galeriaColumn > img {
+    width: 100%;
+    height: 90%;
   }
 
   .flechaIrArriba a > img {
